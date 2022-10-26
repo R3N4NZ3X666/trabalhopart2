@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css" />
+
+</head>
+
+<body onload="verificaLogado()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/fatec.png" alt="Fatec itu"></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">inicio</a>
+
+
+                    </li>
+                </ul>
+            </div>
+            <div class="text-right">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+
+                        <button class=" btn btn-danger">logout</button>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="text-info"><img src="images/aa.png" alt="" width="52" height="52">cadastro de pessoas</h1>
+                <form id="formcadastro">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" name=n ome id="nome" placeholder="nome completo" autofocus />
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="email">email para contato</label>
+                        <input type="email" class="form-control" name=email id="email" placeholder="insira email">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="salario">salario</label>
+                        <input type="number" class="form-control" name=number id="number" min="0" step="0.01">
+                    </div>
+
+                    <div class="from-group">
+
+                        <label for="nascimento"> Data de nascimento</label>
+
+                        <input type="date" class="form-control" name="nascimento" id="nascimento" />
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="sexo">Sexo</label>
+
+                        <input type="radio" class="btn-check" name="sexo" id="sexoM" value="Masculino" checked>
+
+                        <label class="btn btn-outline-info" for="sexoM">Masculino</label>
+
+                        <input type="radio" class="btn-check" name="sexo" id="sexoF" value="Feminino" checked>
+
+                        <label class="btn btn-outline-danger" for="sexoF">Feminino</label>
+
+
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" name="id" id="id" />
+                    </div>
+                    <button class="btn btn-success my-4">Salvar</button>
+                    <button class="btn btn-danger my-4">Limpar</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <h1 class="text-primary">✍Listagem de Pessoas</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/authentication.js"></script>
+
+</body>
+
+</html>
